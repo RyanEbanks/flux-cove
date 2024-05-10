@@ -153,8 +153,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
 
             setCartItems(updatedData);
             // console.log('updated data:', updatedData);
-            //Calculate the new total price
-            calculateTotalPrice();
+            calculateTotalPrice(); //Calculate the new total price
         } catch (error) {
             console.error('Error adding to cart: ', error.message);
         }
@@ -190,9 +189,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
             </div>
         );
     }
-    // Add cart item price adding functionalities 
-    // probably store the information in an array then add them to do the total score 
-    // then checkout button.
+    
     return (
         <div className='m-4'>
             <div className=' ml-4 md:ml-8 mb-6'>
@@ -236,8 +233,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
                                 {/* Price section */}
                                 <div className='flex flex-row grow justify-end'>
                                     <p className='inline-block my-1 font-light text-base mt-2 py-3.5'>${item.productPrice}</p>
-                                    {/* Remove item button  */}
-                                    {/* Make this delete the object */}
+                                    {/* delete one item button */}
                                     <button className='inline-flex items-center justify-center font-medium py-3.5 px-3 mt-5 h-7 w-7 hover:border hover:bg-gray-300 hover:border-gray-300 hover:rounded-full' onClick={() => deleteOneCart(item._id)}>X</button>
                                 </div>
                             </div>
