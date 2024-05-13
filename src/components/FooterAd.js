@@ -1,7 +1,7 @@
-import grid1 from '../images/footer1.jpg';
-import grid2 from '../images/footer2.jpg';
-import grid3 from '../images/footer5.jpg';
-import grid4 from '../images/footer6.jpg';
+import grid1 from '../images/footer1.webp';
+import grid2 from '../images/footer2.webp';
+import grid3 from '../images/footer5.webp';
+import grid4 from '../images/footer6.webp';
 import '../index.css';
 
 

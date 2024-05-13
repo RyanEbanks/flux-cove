@@ -57,7 +57,7 @@ const ProductSale = ({ url }) => {
         >
             {products.map((product) => (
                 <li key={product.productId} className='list-none'>
-                    <Link to={`/api/product/${product.productId}`}>
+                    <Link to={`/product/${product.productId}`}>
                         <div className='flex-col m-4 w-[332px] h-[434px]'>
                             <div className='w-[332px] h-[330px] bg-[#efefef]'>
                                 <img

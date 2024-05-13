@@ -12,9 +12,10 @@ function Footer() {
                 <div className='flex flex-col md:flex-row mt-4 lg:mt-14 px-4 lg:px-8'>
                     {/* About and Contact */}
                     <div className='flex grow flex-col lg:w-1/4 lg:mr-12 underline underline-offset-8'>
-                        <p className='pb-2'>About</p>
-                        <p className='pb-2'>Contact</p>
-                        <p>Privacy Policy</p>
+                        <a href='/' className='pb-2'>Home</a>
+                        <a href='/shop' className='pb-2'>Shop</a>
+                        <a href='/collection' className='pb-2'>Collection</a>
+                        <a href='/contact' className='pb-2'>Contact</a>
                     </div>
 
                     {/* Social Media Links */}
