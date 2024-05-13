@@ -32,5 +32,12 @@ This project is used to demonstrate my utilization of front-end and back-end tec
 N/A
 
 ## Tests
-N/A
+```
+Sign In to Account-
+email: john.doe84@example.com
+password: SecurePwd123
+
+When Checking Out use a valid card expiration date
+Card Number: 4242 4242 4242 4242
+```
 
