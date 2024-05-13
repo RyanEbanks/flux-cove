@@ -92,7 +92,7 @@ const Navbar = ({ isLoggedIn, username, onLogout, cartAmount }) => {
                         </div>
                     </>
                 ) : (
-                    <Link to={`/auth/login`}>
+                    <Link to={`/login`}>
                         <p className='border-transparent border-b hover:border-black py-1 font-light text-xs md:text-sm'>Sign In</p>
                     </Link>
                 )}

@@ -94,7 +94,7 @@ const SingleProduct = ({ isLoggedIn, username, setCartItems, url }) => {
       };
 
     const handleSignIn = () => {
-        navigate('/auth/login');
+        navigate('/login');
       };
 
     const displayMessage = () => {
