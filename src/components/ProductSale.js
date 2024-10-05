@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Loader from '../functions/loader.js';
 import '../index.css';
 
-const ProductSale = () => {
+const ProductSale = ({ url }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -13,7 +13,7 @@ const ProductSale = () => {
         const fetchData = async () => {
             try {
                 // if(products.length === 0) {
-                const response = await fetch(`http://localhost:3001/api/product/sale/true`);
+                const response = await fetch(`${url}/api/product/sale/true`);
                 if (!response.ok) {
                     throw new Error(`Network response error: ${response.statusText}`);
                 }
@@ -57,7 +57,7 @@ const ProductSale = () => {
         >
             {products.map((product) => (
                 <li key={product.productId} className='list-none'>
-                    <Link to={`/api/product/${product.productId}`}>
+                    <Link to={`/product/${product.productId}`}>
                         <div className='flex-col m-4 w-[332px] h-[434px]'>
                             <div className='w-[332px] h-[330px] bg-[#efefef]'>
                                 <img

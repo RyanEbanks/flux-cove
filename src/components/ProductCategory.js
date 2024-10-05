@@ -15,7 +15,7 @@ const ProductCategory = ({ url }) => {
             try {
                 setLoading(true)
                 // if(products.length === 0) {
-                const response = await fetch(`http://localhost:3001/api/product/category/${category}`);
+                const response = await fetch(`${url}/api/product/category/${category}`);
                 if (!response.ok) {
                     throw new Error(`Network response error: ${response.statusText}`);
                 }
@@ -59,7 +59,7 @@ const ProductCategory = ({ url }) => {
         >
             {products.map((product) => (
                 <li key={product.productId} className='list-none'>
-                    <Link to={`/api/product/${product.productId}`}>
+                    <Link to={`/product/${product.productId}`}>
                         <div className='flex-col m-4 w-[332px] h-[434px]'>
                             <div className='w-[332px] h-[330px] bg-[#efefef]'>
                                 <img

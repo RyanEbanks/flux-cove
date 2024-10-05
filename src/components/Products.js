@@ -15,12 +15,11 @@ const Products = ({ url }) => {
                 setLoading(true);
                 //Only fetching if the products dont exist
                 //    if(products.length === 0) {
-                const response = await fetch(`http://localhost:3001/home/shop`);
+                const response = await fetch(`${url}/home/shop`);
                 if (!response.ok) {
                     throw new Error(`Network response error: ${response.statusText}`);
                 }
                 const data = await response.json();
-                console.log(`The Url should be localhost: ${url}`);
                 setProducts(data);
                 //    } 
             } catch (error) {
@@ -54,7 +53,7 @@ const Products = ({ url }) => {
         >
             {products.map((product) => (
                 <li key={product.productId} className='list-none'>
-                    <Link to={`/api/product/${product.productId}`}>
+                    <Link to={`/product/${product.productId}`}>
                         <div className='flex-col m-4 w-[332px] h-[434px]'>
                             <div className='w-[332px] h-[330px] bg-[#efefef]'>
                                 <img

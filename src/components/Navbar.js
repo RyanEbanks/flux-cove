@@ -13,7 +13,7 @@ const Navbar = ({ isLoggedIn, username, onLogout, cartAmount }) => {
     const menuSelect = () => {
         setToggleMenu(!toggleMenu);
     }
-    
+
     return (
         <nav className='flex justify-between md:px-10 text-base font-thin tracking-wide py-5'>
             {/* Hamburger Menu */}
@@ -73,13 +73,20 @@ const Navbar = ({ isLoggedIn, username, onLogout, cartAmount }) => {
                 </Link>
             </div>
             {/* Flux Logo Text */}
+<<<<<<< HEAD
             <div className='flex grow w-1 self-center text-center lg:justify-center lg:items-center py-1 lg:text-2xl text-lg font-medium tracking-widest'>
                 <p>FluxCove</p>
+=======
+            <div className='flex grow w-1 self-center text-center justify-center items-center py-1 lg:text-2xl text-lg font-medium tracking-widest'>
+                <Link to={`/`}>
+                    <p>FluxCove</p>
+                </Link>
+>>>>>>> 1b0d8249ae3346ffdd973d09e7b84776b17dc30d
             </div>
             {/* Instagram icon */}
             <div className='flex flex-row grow w-1 items-center justify-end md:space-x-2 space-x-4 text-sm'>
                 <div className='hidden lg:flex'>
-                <AiOutlineInstagram size={20} />
+                    <AiOutlineInstagram size={20} />
                 </div>
                 {/* If log in is true then show the following else show sign up */}
                 {isLoggedIn ? (
@@ -90,7 +97,7 @@ const Navbar = ({ isLoggedIn, username, onLogout, cartAmount }) => {
                         </div>
                     </>
                 ) : (
-                    <Link to={`/auth/login`}>
+                    <Link to={`/login`}>
                         <p className='border-transparent border-b hover:border-black py-1 font-light text-xs md:text-sm'>Sign In</p>
                     </Link>
                 )}

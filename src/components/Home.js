@@ -1,4 +1,4 @@
-import hero from '../images/Banner-Hero.png';
+import hero from '../images/Banner-Hero.webp';
 // import heroRight from '../images/banner-right.png';
 import '../index.css';
 

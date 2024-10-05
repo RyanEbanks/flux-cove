@@ -27,7 +27,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
     const checkoutDelete = async () => {
         try {
             //Setting loading to true before the request
-            const response = await fetch(`http://localhost:3001/auth/user/remove-checkout`, {
+            const response = await fetch(`${url}/auth/user/remove-checkout`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
     const deleteOneCart = async (cartId) => {
         try {
             //Setting loading to true before the request
-            const response = await fetch(`http://localhost:3001/auth/user/deleteOneCart`, {
+            const response = await fetch(`${url}/auth/user/deleteOneCart`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
                 throw new Error('Authentication token not found');
             }
 
-            const response = await fetch('http://localhost:3001/auth/user/addCart', {
+            const response = await fetch(`${url}/auth/user/addCart`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -153,8 +153,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
 
             setCartItems(updatedData);
             // console.log('updated data:', updatedData);
-            //Calculate the new total price
-            calculateTotalPrice();
+            calculateTotalPrice(); //Calculate the new total price
         } catch (error) {
             console.error('Error adding to cart: ', error.message);
         }
@@ -178,7 +177,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
     //Array.isArray is a built in method to check to see if something is an array
     if (!Array.isArray(cartItems) || cartItems.length === 0) {
         return (
-            <div className='flex flex-col justify-center items-center my-8'>
+            <div className='flex flex-col justify-center items-center my-8 xl:my-48'>
                 <p className='text-2xl font-semibold uppercase'>Shopping Cart</p>
                 <p className='text-xl mt-4'>You have nothing in your shopping cart</p>
                 <p className="my-4">
@@ -190,9 +189,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
             </div>
         );
     }
-    // Add cart item price adding functionalities 
-    // probably store the information in an array then add them to do the total score 
-    // then checkout button.
+    
     return (
         <div className='m-4'>
             <div className=' ml-4 md:ml-8 mb-6'>
@@ -202,7 +199,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
                 {/* Product Information */}
                 {/* Trying to retrieve index number */}
                 {cartItems.map((item, index) => (
-                    <div key={item.productId} className='flex flex-col grow mx-4 md:mx-8 h-1/3'>
+                    <div key={item.productId} className='flex flex-col grow mx-4 md:mx-8 xl:mt-16 h-1/3'>
                         <div className='flex flex-row'>
                             <div className='flex flex-row grow-2'>
                                 <img
@@ -236,8 +233,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
                                 {/* Price section */}
                                 <div className='flex flex-row grow justify-end'>
                                     <p className='inline-block my-1 font-light text-base mt-2 py-3.5'>${item.productPrice}</p>
-                                    {/* Remove item button  */}
-                                    {/* Make this delete the object */}
+                                    {/* delete one item button */}
                                     <button className='inline-flex items-center justify-center font-medium py-3.5 px-3 mt-5 h-7 w-7 hover:border hover:bg-gray-300 hover:border-gray-300 hover:rounded-full' onClick={() => deleteOneCart(item._id)}>X</button>
                                 </div>
                             </div>
@@ -259,7 +255,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
                 </div>
             </div>
             {/* container for empty cart and checkout button */}
-            <div className='flex flex-row mb-8 mx-8'>
+            <div className='flex flex-row mb-8 xl:mb-32 mx-8'>
                 <div className='flex grow justify-end'>
                     <button className='inline-block font-medium bg-black text-white hover:bg-slate-800 py-1.5 px-6 mt-2 w-1/2' onClick={() => checkoutCart()}>Checkout</button>
                 </div>

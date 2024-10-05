@@ -23,7 +23,7 @@ import SingleProduct from './components/SingleProduct';
 import './index.css';
 
 function App() {
-  const url = process.env.MONGODB_URI; // Access localhost or vercel
+  const url = process.env.REACT_APP_API_URL; // Access localhost or vercel
   const [isLoggedIn, setIsLoggedIn] = useState(false); //Default so it doesn't display a user
   const [username, setUsername] = useState('');
   const [cartItems, setCartItems] = useState([]);
@@ -89,8 +89,8 @@ function App() {
   return (
     //Allowing router to work across app.js
 
-    <div className="App font-abc subpixel-antialiased text-gray-900 bg-white">
-      <header className="App-header">
+    <div className='App font-abc subpixel-antialiased text-gray-900 bg-white'>
+      <header className='App-header'>
         {/* passing onLogout prop to Navbar to utilize the logout func */}
         <Navbar isLoggedIn={isLoggedIn} username={username} onLogout={handleLogout} cartAmount={cartItems.length} />
       </header>
@@ -98,7 +98,7 @@ function App() {
         {/* Switch makes sure only one route is shown at a given time */}
         {/* Switch was replaced with routes in version 6 of react */}
         <Routes>
-          <Route path="/" element={
+          <Route path='/' element={
             <>
               <Home />
               <Advertisement />
@@ -107,7 +107,7 @@ function App() {
             </>
           }
           />
-          <Route path="/shop" element={
+          <Route path='/shop' element={
             <>
               <Shop />
               <Products url={url} />
@@ -116,19 +116,19 @@ function App() {
             </>
           }
           />
-          <Route path="/collection" element={
+          <Route path='/collection' element={
             <>
               <Collection />
             </>
           }
           />
-          <Route path="/contact" element={
+          <Route path='/contact' element={
             <>
               <Contact />
             </>
           }
           />
-          <Route path="/api/product/category/:category" element={
+          <Route path='/product/category/:category' element={
             <>
               <Shop />
               <ProductCategory url={url} />
@@ -136,33 +136,33 @@ function App() {
             </>
           }
           />
-          <Route path="/api/product/category/sale" element={
+          <Route path='/product/category/sale' element={
             <>
               <Shop />
-              <ProductSale />
+              <ProductSale url={url} />
               <FooterAd />
             </>
           }
           />
-          <Route path="/api/product/:productId" element={
+          <Route path='/product/:productId' element={
             <>
               <SingleProduct isLoggedIn={isLoggedIn} username={username} setCartItems={setCartItems} url={url} />
               <Comments isLoggedIn={isLoggedIn} username={username} url={url} />
             </>
           }
           />
-          <Route path="/auth/login" element={
+          <Route path='/login' element={
             <Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} refetchCartData={refetchCartData} url={url} />
           } />
-          <Route path="/auth/register" element={
+          <Route path='/register' element={
             <Register setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} url={url} />
           } />
           {/* You can change the other routes so they arent so revealing */}
-          <Route path="/cart" element={
+          <Route path='/cart' element={
             <Cart isLoggedIn={isLoggedIn} username={username} cartItems={cartItems}
               setCartItems={setCartItems} setError={setError} error={error} refetchCartData={refetchCartData} url={url} />
           } />
-          <Route path="*" element={
+          <Route path='*' element={
             <NotFound />
           } />
         </Routes>

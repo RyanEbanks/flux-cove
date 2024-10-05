@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import heels from '../images/heels.jpg';
-import homeDisplay from '../images/home-display.jpg';
-import sandals from '../images/sandals.jpg';
-import shoeDisplay from '../images/shoeDisplay.png';
-import sneakers from '../images/sneakers.jpg';
+import heels from '../images/heels.webp';
+import homeDisplay from '../images/home-display.webp';
+import sandals from '../images/sandals.webp';
+import shoeDisplay from '../images/shoe-display.webp';
+import sneakers from '../images/sneakers.webp';
 import '../index.css';
 
 function HomeDisplay() {
@@ -12,19 +12,19 @@ function HomeDisplay() {
         <div>
             <div className='flex flex-col lg:flex-row lg:justify-evenly pt-14 mx-auto'>
                 <motion.div
-                    className='flex-col my-8 w-1/2 mx-auto lg:mx-8 lg:w-[611px] lg:h-[746.922px]'
+                    className='flex-col my-8 w-1/2 mx-auto lg:mx-8 lg:w-[611px] lg:h-[746.922px] xl:h-[746.922px]'
                     animate={{
                         x: ['-100%', '0%'],
                         opacity: [0, 1]
                     }}
-                    transition={{ duration: 2, ease: 'linear' }}
+                    transition={{ duration: 0.5, ease: 'linear' }}
                 >
                     <img
                         src={sneakers}
                         alt='guy in sneakers'
-                        className='object-cover w-full h-auto lg:w-[692.984px] lg:h-[518px] pr-8'
+                        className='object-cover w-full h-auto lg:w-[692.984px] lg:h-[518px] xl:h-[726.922px] pr-8'
                     />
-                    <a href='/api/product/category/sneakers'>
+                    <a href='/product/category/sneakers'>
                         <button className='font-medium bg-black text-white hover:bg-slate-800 py-3.5 px-auto mt-2 w-1/2'>Sneakers</button>
                     </a>
                 </motion.div>
@@ -34,15 +34,15 @@ function HomeDisplay() {
                         x: ['-100%', '0%'],
                         opacity: [0, 1]
                     }}
-                    transition={{ duration: 2, ease: 'linear' }}
+                    transition={{ duration: 0.5, ease: 'linear' }}
                 >
                     <img
                         src={heels}
                         alt='girl in heels'
-                        className='object-cover w-full h-auto lg:w-[692.984px] lg:h-[518px] pr-8 md:mx-auto'
+                        className='object-cover w-full h-auto lg:w-[692.984px] lg:h-[518px] xl:h-[726.922px] pr-8 md:mx-auto'
                     />
-                    <a href='/api/product/category/heels'>
-                        <button className='inline-block font-medium bg-black text-white hover:bg-slate-800 py-3.5 px-auto mt-2 w-1/2'>Heels</button>
+                    <a href='/product/category/boots'>
+                        <button className='inline-block font-medium bg-black text-white hover:bg-slate-800 py-3.5 px-auto mt-2 w-1/2'>Boots</button>
                     </a>
                 </motion.div>
                 <motion.div
@@ -51,14 +51,14 @@ function HomeDisplay() {
                         x: ['-100%', '0%'],
                         opacity: [0, 1]
                     }}
-                    transition={{ duration: 2, ease: 'linear' }}
+                    transition={{ duration: 0.5, ease: 'linear' }}
                 >
                     <img
                         src={sandals}
                         alt='girl in sandals'
-                        className='object-cover w-full h-auto lg:w-[692.984px] lg:h-[518px] pr-8 md:mx-auto'
+                        className='object-cover w-full h-auto lg:w-[692.984px] lg:h-[518px] xl:h-[726.922px] pr-8 md:mx-auto'
                     />
-                    <a href='/api/product/category/sandals'>
+                    <a href='/product/category/sandals'>
                         <button className='inline-block font-medium bg-black text-white hover:bg-slate-800 py-3.5 px-auto mt-2 w-1/2'>Sandals</button>
                     </a>
                 </motion.div>
@@ -74,12 +74,12 @@ function HomeDisplay() {
                                 x: ['-100%', '0%'],
                                 opacity: [0, 1]
                             }}
-                            transition={{ duration: 2, ease: 'linear' }}
+                            transition={{ duration: 0.5, ease: 'linear' }}
                         >
                             <img
                                 src={shoeDisplay}
                                 alt='hero banner'
-                                className='object-cover w-full h-auto lg:w-[980px] lg:h-[700px]'
+                                className='object-cover w-full h-auto lg:w-[980px] lg:h-[700px] xl:h-[900px]'
                             />
                             <div>
                                 <p className='text-xl font-semibold uppercase'>Focused on high quality manufacturing and design.</p>
@@ -94,15 +94,15 @@ function HomeDisplay() {
                                 x: ['-100%', '0%'],
                                 opacity: [0, 1]
                             }}
-                            transition={{ duration: 2, ease: 'linear' }}
+                            transition={{ duration: 0.5, ease: 'linear' }}
                         >
                             <p className='text-xl font-light mb-2'>Built for comfort</p>
                             <img
                                 src={homeDisplay}
                                 alt='hero banner'
-                                className='object-cover w-full md:w-1/2 h-auto lg:w-[621.719px] lg:h-[464.672px]'
+                                className='object-cover w-full md:w-1/2 h-auto lg:w-[621.719px] lg:h-[464.672px] xl:h-[764.672px]'
                             />
-                            <a href='/api/product/category/sale'>
+                            <a href='/product/category/sale'>
                                 <button className='inline-block font-medium bg-black text-white hover:bg-slate-800 py-3.5 px-6 mt-2'>On Sale</button>
                             </a>
                         </motion.div>

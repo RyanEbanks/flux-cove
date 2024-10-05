@@ -11,7 +11,7 @@ const Comments = ({ isLoggedIn, username, url }) => {
     //Retrieving comments from the database
     const fetchData = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/api/comment/${productId}`);
+            const response = await fetch(`${url}/api/comment/${productId}`);
             if (!response.ok) {
                 throw new Error(`Network response error: ${response.statusText}`);
             }
@@ -40,7 +40,7 @@ const Comments = ({ isLoggedIn, username, url }) => {
         e.preventDefault();
         //API request to post comment if logged in
         try {
-            const response = await fetch('http://localhost:3001/api/comment/newComment', {
+            const response = await fetch(`${url}/api/comment/newComment`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

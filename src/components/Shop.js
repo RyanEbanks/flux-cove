@@ -7,31 +7,31 @@ function Shop() {
     return(
         <div className='flex border-b border-slate-300 justify-center m-4 md:m-16 py-4 md:py-16 text-sm md:text-base'>
             <div>
-            <Link to={`/api/product/category/sale`}>
+            <Link to={`/product/category/sale`}>
             <p className='mx-2 md:mx-7 block'>Sale</p>
             </Link>
             </div>
             <div className='border-r border-slate-300 py-1'></div>
             <div>
-            <Link to={`/api/product/category/sneakers`}>
+            <Link to={`/product/category/sneakers`}>
             <p className='mx-2 md:mx-7 block'>Sneakers</p>
             </Link>
             </div>
             <div className='border-r border-slate-300 py-1'></div>
             <div>
-            <Link to={`/api/product/category/sandals`}>
+            <Link to={`/product/category/sandals`}>
             <p className='mx-2 md:mx-7 block'>Sandals</p>
             </Link>
             </div>
             <div className='border-r border-slate-300 py-1'></div>
             <div>
-            <Link to={`/api/product/category/flats`}>
+            <Link to={`/product/category/flats`}>
             <p className='mx-2 md:mx-7 block'>Flats</p>
             </Link>
             </div>
             <div className='border-r border-slate-300 py-1'></div>
             <div>
-            <Link to={`/api/product/category/boots`}>
+            <Link to={`/product/category/boots`}>
             <p className='mx-2 md:mx-7 block'>Boots</p>
             </Link>
             </div>
