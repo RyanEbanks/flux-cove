@@ -17,10 +17,10 @@ const Navbar = ({ isLoggedIn, username, onLogout, cartAmount }) => {
     return (
         <nav className='flex justify-between md:px-10 text-base font-thin tracking-wide py-5'>
             {/* Hamburger Menu */}
-            <div className='lg:hidden grow md:justify-center'>
+            <div className='lg:hidden grow mx-2 md:justify-center'>
                 {!toggleMenu ?
                     (
-                        <div className='lg:hidden flex grow'>
+                        <div className='lg:hidden pl-2 flex grow'>
                             <button onClick={menuSelect} className='flex items-center py-3 md:py-2'>
                                 <RxHamburgerMenu size={20} />
                             </button>
@@ -73,7 +73,7 @@ const Navbar = ({ isLoggedIn, username, onLogout, cartAmount }) => {
                 </Link>
             </div>
             {/* Flux Logo Text */}
-            <div className='flex grow w-1 self-center text-center justify-center items-center py-1 lg:text-2xl text-lg font-medium tracking-widest'>
+            <div className='flex grow w-1 self-center text-center lg:justify-center lg:items-center py-1 lg:text-2xl text-lg font-medium tracking-widest'>
                 <p>FluxCove</p>
             </div>
             {/* Instagram icon */}
