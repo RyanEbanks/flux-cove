@@ -73,15 +73,8 @@ const Navbar = ({ isLoggedIn, username, onLogout, cartAmount }) => {
                 </Link>
             </div>
             {/* Flux Logo Text */}
-<<<<<<< HEAD
             <div className='flex grow w-1 self-center text-center lg:justify-center lg:items-center py-1 lg:text-2xl text-lg font-medium tracking-widest'>
                 <p>FluxCove</p>
-=======
-            <div className='flex grow w-1 self-center text-center justify-center items-center py-1 lg:text-2xl text-lg font-medium tracking-widest'>
-                <Link to={`/`}>
-                    <p>FluxCove</p>
-                </Link>
->>>>>>> 1b0d8249ae3346ffdd973d09e7b84776b17dc30d
             </div>
             {/* Instagram icon */}
             <div className='flex flex-row grow w-1 items-center justify-end md:space-x-2 space-x-4 text-sm'>
