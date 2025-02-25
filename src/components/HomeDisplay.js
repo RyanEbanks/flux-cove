@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import heels from '../images/heels.webp';
 import homeDisplay from '../images/home-display.webp';
@@ -9,7 +10,7 @@ import '../index.css';
 function HomeDisplay() {
     return (
         // section 1
-        <div>
+        <div data-testid='home-display-id'>
             <div className='flex flex-col lg:flex-row lg:justify-evenly pt-14 mx-auto'>
                 <motion.div
                     className='flex-col my-8 w-1/2 mx-auto lg:mx-8 lg:w-[611px] lg:h-[746.922px] xl:h-[746.922px]'
@@ -78,7 +79,7 @@ function HomeDisplay() {
                         >
                             <img
                                 src={shoeDisplay}
-                                alt='hero banner'
+                                alt='image of shoe'
                                 className='object-cover w-full h-auto lg:w-[980px] lg:h-[700px] xl:h-[900px]'
                             />
                             <div>
@@ -99,7 +100,7 @@ function HomeDisplay() {
                             <p className='text-xl font-light mb-2'>Built for comfort</p>
                             <img
                                 src={homeDisplay}
-                                alt='hero banner'
+                                alt='girl seated with shoes on'
                                 className='object-cover w-full md:w-1/2 h-auto lg:w-[621.719px] lg:h-[464.672px] xl:h-[764.672px]'
                             />
                             <a href='/product/category/sale'>

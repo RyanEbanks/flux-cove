@@ -191,7 +191,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
     }
     
     return (
-        <div className='m-4'>
+        <div data-testid='cartId' className='m-4'>
             <div className=' ml-4 md:ml-8 mb-6'>
                 <p className='text-2xl font-semibold uppercase'>Shopping Cart</p>
             </div>
