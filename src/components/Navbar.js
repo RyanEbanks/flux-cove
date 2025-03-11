@@ -20,7 +20,7 @@ const Navbar = ({ isLoggedIn, username, onLogout, cartAmount }) => {
             <div className='lg:hidden grow mx-2 md:justify-center'>
                 {!toggleMenu ?
                     (
-                        <div className='lg:hidden pl-2 flex grow border-red-800 border-2'>
+                        <div className='lg:hidden pl-2 flex grow'>
                             <button onClick={menuSelect} className='flex items-center py-3 md:py-2'>
                                 <RxHamburgerMenu size={20} />
                             </button>
