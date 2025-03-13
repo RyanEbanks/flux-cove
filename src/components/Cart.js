@@ -199,7 +199,7 @@ const Cart = ({ isLoggedIn, username, cartItems, setCartItems, setError, refetch
                 {/* Product Information */}
                 {/* Trying to retrieve index number */}
                 {cartItems.map((item, index) => (
-                    <div key={item.productId} className='flex flex-col grow mx-4 md:mx-8 xl:mt-16 h-1/3'>
+                    <div key={item.productId || index} className='flex flex-col grow mx-4 md:mx-8 xl:mt-16 h-1/3'>
                         <div className='flex flex-row'>
                             <div className='flex flex-row grow-2'>
                                 <img
