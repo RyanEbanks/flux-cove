@@ -11,7 +11,7 @@ function HomeDisplay() {
     return (
         // section 1
         <div data-testid='home-display-id'>
-            <div className='flex flex-col lg:flex-row lg:justify-evenly pt-14 mx-auto'>
+            <div className='flex flex-col lg:flex-row lg:justify-evenly pt-14 w-[90%] mx-auto'>
                 <motion.div
                     className='flex-col my-8 w-1/2 mx-auto lg:mx-8 lg:w-[611px] lg:h-[746.922px] xl:h-[746.922px]'
                     animate={{
@@ -26,7 +26,7 @@ function HomeDisplay() {
                         className='object-cover w-full h-auto lg:w-[692.984px] lg:h-[518px] xl:h-[726.922px] pr-8'
                     />
                     <a href='/product/category/sneakers'>
-                        <button className='font-medium bg-black text-white hover:bg-slate-800 py-3.5 px-auto mt-2 w-1/2'>Sneakers</button>
+                        <button className='inline-block font-medium bg-black text-white hover:bg-slate-800 py-3.5 px-auto mt-2 w-1/2'>Sneakers</button>
                     </a>
                 </motion.div>
                 <motion.div
@@ -67,7 +67,7 @@ function HomeDisplay() {
 
             {/* Section 2 */}
             <div>
-                <div className='flex flex-col lg:flex-row px-4 lg:px-24'>
+                <div className='flex flex-col lg:flex-row px-4 lg:px-24 w-[90%] mx-auto'>
                     <div className='grow'>
                         <motion.div
                             className='my-24 pr-8 lg:pr-80'
